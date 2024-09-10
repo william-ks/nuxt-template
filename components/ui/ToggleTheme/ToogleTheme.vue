@@ -48,7 +48,7 @@ onMounted(() => {
   position: relative;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 5px 10px hsl(var(--shadow));
+  box-shadow: 0 0px 5em hsl(var(--shadow));
 
   background-color: hsl(var(--toggleThemeBtn-sub-bg));
   border: 1px solid hsl(var(--toggleThemeBtn-border));
@@ -59,7 +59,7 @@ onMounted(() => {
   color: hsl(var(--toggleThemeBtn-color));
   border: 1px solid hsl(var(--toggleThemeBtn-border));
   
-  box-shadow: 0 5px 10px hsl(var(--shadow));
+  box-shadow: 0 2px 5px hsl(var(--shadow));
   position: absolute;
   width: 25px;
   height: 25px;

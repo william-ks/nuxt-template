@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  ssr: false,
   modules: [
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
@@ -10,13 +9,17 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/icon",
     "@nuxtjs/color-mode",
-    "@pinia/nuxt"
+    "@pinia/nuxt",
+    "vuetify-nuxt-module",
+    "@vueform/nuxt",
   ],
 
   tailwindcss: {
     cssPath: ["~/styles/tailwind.css", { injectPosition: "first" }],
     configPath: "~/tailwind.config.js",
   },
+
+  plugins: ["~/plugins/routes.ts"],
 
   colorMode: {
     preference: "system", // default value of $colorMode.preference

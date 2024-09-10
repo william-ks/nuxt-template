@@ -7,6 +7,9 @@ export default {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
+    "./vueform.config.ts",
+    "./node_modules/@vueform/vueform/themes/tailwind/**/*.vue",
+    "./node_modules/@vueform/vueform/themes/tailwind/**/*.js",
   ],
   theme: {
     container: {
@@ -71,5 +74,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@vueform/vueform/tailwind")],
 };

@@ -44,7 +44,6 @@ body.lockScroll {
 .center {
   max-width: 1280px;
   width: 100%;
-  height: 100%;
   padding: 0 4%;
   margin: 0 auto;
 }
@@ -88,6 +87,10 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: inherit !important;
 }
 
+.form-color-input{
+  color: hsl(var(--foreground));
+}
+
 @layer base {
   :root {
     --background: 210 5% 95%;
@@ -104,7 +107,7 @@ input:-webkit-autofill:active {
 
     --border: 163 40% 80%;
 
-    --card-bg: hsl(0 0% 100%);
+    --card-bg: 0 0% 100%;
 
     --toggleThemeBtn-bg: 0 0% 94%;
     --toggleThemeBtn-sub-bg: 0 0% 94%;
@@ -131,8 +134,8 @@ input:-webkit-autofill:active {
 
     --toggleThemeBtn-bg: 0 0% 14%;
     --toggleThemeBtn-sub-bg: 0 0% 12%;
-    --toggleThemeBtn-color: 18 17% 77%;
-    --toggleThemeBtn-border: 18 17% 77%;
+    --toggleThemeBtn-color: 170 15% 77%;
+    --toggleThemeBtn-border: 170 15% 77%;
   }
 }
 

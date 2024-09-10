@@ -41,7 +41,7 @@
           <ul class="flex gap-5">
             <li>
               <p>Text | Email</p>
-              <Input v-model="name" />
+              <Input v-model="name" placeholder="Insira seu texto" />
             </li>
             <li>
               <p>Password</p>
@@ -62,6 +62,26 @@
               </div>
             </li>
           </ul>
+        </Card>
+      </div>
+
+      <div
+        class="my-5 flex w-[100%] flex-col items-center justify-center gap-10"
+      >
+        <Card shadow border>
+          <h3 class="mb-5 text-2xl font-light">Vue Form</h3>
+
+          <!-- app.vue -->
+
+          <ClientOnly>
+            <Vueform>
+              <TextElement
+                name="teste"
+                input-type="text"
+                :mask="{ mask: '+55 (00) 00000-0000', placeholder: true }"
+              />
+            </Vueform>
+          </ClientOnly>
         </Card>
       </div>
 
@@ -112,11 +132,40 @@
         class="my-5 flex w-[100%] flex-col items-center justify-center gap-10"
       >
         <Card shadow border>
-          <h3 class="mb-5 text-2xl font-light">Tabelas</h3>
+          <h3 class="mb-5 text-2xl font-light">Rotas</h3>
 
-          <div class="overflow-hidden">
-            
-          </div>
+          <ul>
+            <li v-for="route of routes" :key="route.path">
+              <p>Name {{ route.name }}</p>
+              <p>Path => {{ route.path }}</p>
+            </li>
+          </ul>
+        </Card>
+      </div>
+
+      <div
+        class="my-5 flex w-[100%] flex-col items-center justify-center gap-10"
+      >
+        <Card shadow border>
+          <h3 class="mb-5 text-2xl font-light">Tabelas</h3>
+          <!-- <Grid /> -->
+        </Card>
+      </div>
+
+      <div
+        class="my-5 flex w-[100%] flex-col items-center justify-center gap-10"
+      >
+        <Card shadow border>
+          <h3 class="mb-5 text-2xl font-light">Graficos</h3>
+          <!-- <Chart /> -->
+        </Card>
+      </div>
+      <div
+        class="my-5 flex w-[100%] flex-col items-center justify-center gap-10"
+      >
+        <Card shadow border>
+          <h3 class="mb-5 text-2xl font-light">Vuetify</h3>
+          <v-btn prepend-icon="$vuetify"> Button </v-btn>
         </Card>
       </div>
     </div>
@@ -131,6 +180,8 @@ import Avatar from "~/components/ui/Avatar/Avatar.vue";
 import Modal from "~/components/ui/Modal/Modal.vue";
 import Select from "~/components/ui/Select/Select.vue";
 import ToogleTheme from "~/components/ui/ToggleTheme/ToogleTheme.vue";
+import Grid from "~/components/ui/Grid/Grid.vue";
+import Chart from "~/components/ui/Chart/Chart.vue";
 
 const categories = [
   {
@@ -160,6 +211,7 @@ const password = ref("");
 const toggleShowModal = (val) => {
   showModal.value = val;
 };
+const routes = useNuxtApp().$routes;
 </script>
 
 <style scoped></style>

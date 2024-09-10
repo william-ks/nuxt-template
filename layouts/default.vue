@@ -12,16 +12,13 @@
 </template>
 
 <script setup>
-import Button from "../components/ui/Button/Button.vue";
-import Card from "../components/ui/Card/Card.vue";
-
 </script>
 
 <style>
 main {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 footer.footer {

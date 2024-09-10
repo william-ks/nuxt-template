@@ -1,75 +1,42 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Template
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a basic template to start code, using nuxt 3 fast.
+
+## Libs:
+
+[Nuxt 3](https://nuxt.com/docs/getting-started/introduction) -> Core
+
+[Auto animate](https://auto-animate.formkit.com/) -> Animations
+
+[Nuxt Image](https://nuxt.com/modules/image) -> Images
+
+[Pinia](https://pinia.vuejs.org/) -> Global States
+
+[Tailwind CSS](https://color-mode.nuxtjs.org/) -> Style
+
+[Vuetify](https://nuxt.vuetifyjs.com/) -> Style
+
+[Vue Use](https://vueuse.org/) -> Utils Tools
+
+[Nuxt Icons](https://nuxt.com/modules/icon) -> Icons
+
+[Vueform](https://vueform.com/docs/installation) -> Forms
+
+[Ag-Grid](https://www.ag-grid.com/vue-data-grid/getting-started/) -> Tabelas
+
 
 ## Setup
 
-Make sure to install the dependencies:
+Install the dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on [`http://localhost:3000`](http://localhost:3000):
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

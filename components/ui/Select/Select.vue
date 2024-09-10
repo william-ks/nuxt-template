@@ -139,9 +139,11 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   /* position: relative; */
+  
 }
 
 .customSelect {
+  
   font-size: 0.9rem;
   font-weight: 300;
 }
@@ -154,6 +156,7 @@ onMounted(() => {
 }
 
 .dropdown {
+  z-index: 7;
   position: absolute;
   top: 45px;
   overflow: hidden;

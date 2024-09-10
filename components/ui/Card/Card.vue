@@ -22,7 +22,7 @@ const { shadow, border } = defineProps({
   width: 100%;
   border-radius: 10px;
   padding: 16px 2%;
-  background: var(--card-bg);
+  background: hsl(var(--card-bg));
   color: hsl(var(--card-foreground));
 }
 
