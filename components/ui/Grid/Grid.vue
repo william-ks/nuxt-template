@@ -1,14 +1,16 @@
 <template>
   <!-- The AG Grid component -->
-  <div class="gridContainer">
-    <ag-grid-vue
-      :rowData="rowData"
-      :columnDefs="colDefs"
-      style="height: 500px"
-      :class="themeClass"
-    >
-    </ag-grid-vue>
-  </div>
+  <ClientOnly>
+    <div class="gridContainer">
+      <ag-grid-vue
+        :rowData="rowData"
+        :columnDefs="colDefs"
+        style="height: 500px"
+        :class="themeClass"
+      >
+      </ag-grid-vue>
+    </div>
+  </ClientOnly>
 </template>
 
 <script setup>
@@ -20,7 +22,7 @@ import { AgGridVue } from "ag-grid-vue3";
 const color = useColorMode();
 
 const themeClass = computed(() =>
-  color.preference ? "ag-theme-material-dark" : "ag-theme-material",
+  color.preference === "dark" ? "ag-theme-material-dark" : "ag-theme-material"
 );
 
 const rowData = ref([
@@ -36,4 +38,5 @@ const colDefs = ref([
   { field: "price" },
   { field: "electric" },
 ]);
+
 </script>

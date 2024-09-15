@@ -2,24 +2,23 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: [
-    "@pinia/nuxt",
-    "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt",
-    "@nuxt/image",
-    "@nuxt/icon",
-    "@nuxtjs/color-mode",
-    "@pinia/nuxt",
-    "vuetify-nuxt-module",
-    "@vueform/nuxt",
-  ],
 
-  tailwindcss: {
-    cssPath: ["~/styles/tailwind.css", { injectPosition: "first" }],
-    configPath: "~/tailwind.config.js",
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+    },
+    layoutTransition: { name: "fade", mode: "out-in" },
   },
 
   plugins: ["~/plugins/routes.ts"],
+
+  modules: ["@nuxt/ui", "@pinia/nuxt", "@vueuse/nuxt", "@nuxt/image","@vueform/nuxt",],
+
+  tailwindcss: {
+    cssPath: ["~/styles/tailwind.css", { injectPosition: "first" }],
+    configPath: "~/tailwind.config.ts",
+  },
 
   colorMode: {
     preference: "system", // default value of $colorMode.preference

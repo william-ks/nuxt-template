@@ -3,22 +3,21 @@
     <slot />
     <footer class="footer">
       <div class="center">
-        <h2 class="cursor-pointer">
-          @ Todos os direitos reservados
-        </h2>
+        <h2 class="cursor-pointer">Desenvolvido Por Will Code Systems | 2024 ®</h2>
       </div>
     </footer>
   </main>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style>
 main {
   width: 100%;
-  height: 100%;
-  /* overflow-x: hidden; */
+}
+
+section.page {
+  min-height: calc(100vh - 55px);
 }
 
 footer.footer {

@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,72 +9,43 @@ export default {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
-    "./vueform.config.ts",
-    "./node_modules/@vueform/vueform/themes/tailwind/**/*.vue",
-    "./node_modules/@vueform/vueform/themes/tailwind/**/*.js",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1280px",
-      },
-    },
     extend: {
+      darkMode: "class",
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
-      darkMode: "class",
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+        sky: {
+          50: "#EFFDF5",
+          100: "#D9FBE8",
+          200: "#B3F5D1",
+          300: "#75EDAE",
+          400: "#00DC82",
+          500: "#00C16A",
+          600: "#00A155",
+          700: "#007F45",
+          800: "#016538",
+          900: "#0A5331",
+          950: "#052e16",
         },
-        darkprimary: {
-          DEFAULT: "hsl(var(--dark-primary))",
-          foreground: "hsl(var(--dark-primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "var(--card)",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        semiprimary: {
-          DEFAULT: "hsl(var(--semiprimary))",
-          foreground: "hsl(var(--semiprimary-foreground))",
-        },
-        borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
+        green: {
+          50: "#EFFDF5",
+          100: "#D9FBE8",
+          200: "#B3F5D1",
+          300: "#75EDAE",
+          400: "#00DC82",
+          500: "#00C16A",
+          600: "#00A155",
+          700: "#007F45",
+          800: "#016538",
+          900: "#0A5331",
+          950: "#052e16",
         },
       },
     },
   },
-  plugins: [require("@vueform/vueform/tailwind")],
 };

@@ -2,11 +2,7 @@
   <div @click="toggle" class="toggleBox">
     <div class="iconBg" :class="{ darkActive: darkActive }">
       <Icon v-show="!visibleMoon" class="icon" name="material-symbols:sunny" />
-      <Icon
-        v-show="visibleMoon"
-        class="moon"
-        name="ic:round-nights-stay"
-      />
+      <Icon v-show="visibleMoon" class="moon" name="ic:round-nights-stay" />
     </div>
   </div>
 </template>
@@ -31,11 +27,11 @@ const toggle = async () => {
 
 onMounted(() => {
   if (colorMode.preference === "dark") {
-      darkActive.value = true;
-      visibleMoon.value = true;
-    } else {
-        darkActive.value = false;
-        visibleMoon.value = false;
+    darkActive.value = true;
+    visibleMoon.value = true;
+  } else {
+    darkActive.value = false;
+    visibleMoon.value = false;
   }
 });
 </script>
@@ -58,7 +54,7 @@ onMounted(() => {
   background-color: hsl(var(--toggleThemeBtn-bg));
   color: hsl(var(--toggleThemeBtn-color));
   border: 1px solid hsl(var(--toggleThemeBtn-border));
-  
+
   box-shadow: 0 2px 5px hsl(var(--shadow));
   position: absolute;
   width: 25px;

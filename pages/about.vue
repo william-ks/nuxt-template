@@ -1,7 +1,8 @@
 <template>
   <div>
-    <UButton label="Open" @click="addToast" />
-    <UButton label="home" to="/about" />
+    <UButton label="index" to="/" />
+    <UButton label="index" to="/" />
+    <UButton label="index" to="/" />
 
     <UModal v-model="isOpen">
       <div class="p-4">
