@@ -1,5 +1,5 @@
 <template>
-  <div @click="toggle" class="toggleBox">
+  <div @click="toggle" class="toggleBox dark:bg-gray-950 bg-gray-100">
     <div class="iconBg" :class="{ darkActive: darkActive }">
       <Icon v-show="!visibleMoon" class="icon" name="material-symbols:sunny" />
       <Icon v-show="visibleMoon" class="moon" name="ic:round-nights-stay" />
@@ -44,9 +44,9 @@ onMounted(() => {
   position: relative;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 0px 5em hsl(var(--shadow));
+  box-shadow: 0 5px 10px hsl(var(--shadow));
 
-  background-color: hsl(var(--toggleThemeBtn-sub-bg));
+  /* background-color: hsl(var(--toggleThemeBtn-sub-bg)); */
   border: 1px solid hsl(var(--toggleThemeBtn-border));
 }
 

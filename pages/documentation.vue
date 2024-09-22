@@ -181,7 +181,7 @@ import Input from "~/components/ui/Input/Input.vue";
 import Avatar from "~/components/ui/Avatar/Avatar.vue";
 import Modal from "~/components/ui/Modal/Modal.vue";
 import Select from "~/components/ui/Select/Select.vue";
-import ToogleTheme from "~/components/ui/ToggleTheme/ToogleTheme.vue";
+import ToogleTheme from "~/components/ui/ToggleTheme/ToggleTheme.vue";
 import Grid from "~/components/ui/Grid/Grid.vue";
 import BarChart from "~/components/ui/Charts/BarChart/BarChart.vue";
 import RadialChart from "~/components/ui/Charts/RadialChart/RadialChart.vue";

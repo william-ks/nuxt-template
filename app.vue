@@ -1,14 +1,27 @@
 <template>
-  <div>
-    <UContainer>
-      <NuxtLayout>
-      <NuxtPage :transition="{ name: 'rotate', mode: 'out-in' }" />
-    </NuxtLayout>
-    </UContainer>
+  <NuxtLayout>
+    <NuxtPage :transition="{ name: 'rotate', mode: 'out-in' }" />
+  </NuxtLayout>
 
-    <UNotifications />
-  </div>
+  <UNotifications />
 </template>
+
+<script setup>
+const appConfig = useAppConfig();
+const colorPrimary = localStorage.getItem("nuxt-ui-primary");
+const colorGray = localStorage.getItem("nuxt-ui-gray");
+
+if (colorPrimary) {
+  appConfig.ui.primary = colorPrimary;
+} else {
+  localStorage.setItem("nuxt-ui-primary", appConfig.ui.primary);
+}
+if (colorGray) {
+  appConfig.ui.gray = colorGray;
+} else {
+  localStorage.setItem("nuxt-ui-gray", appConfig.ui.gray);
+}
+</script>
 
 <style>
 /* animation FADE IN & FADE OUT  */

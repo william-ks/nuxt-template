@@ -1,5 +1,5 @@
 <template>
-  <Bar :data="props.chartData" :options="chartOptions" />
+    <Bar :data="props.chartData" :options="chartOptions" />
 </template>
 
 <script setup lang="ts">
@@ -22,7 +22,7 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend,
+  Legend
 );
 
 const chartOptions = {

@@ -1,5 +1,5 @@
 <template>
-  <Radar :options="chartOptions" :data="props.chartData" />
+    <Radar :options="chartOptions" :data="props.chartData" />
 </template>
 
 <script lang="ts" setup>
@@ -22,7 +22,7 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
-  Legend,
+  Legend
 );
 
 const chartOptions = {

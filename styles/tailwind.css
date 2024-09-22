@@ -63,6 +63,28 @@
   }
 }
 
+@layer utilities {
+  *::-webkit-scrollbar {
+    /* width: 0.55rem;
+    height: 6px; */
+    width: 0.7rem;
+    @apply bg-gray-200 dark:bg-gray-950
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    /* border: 4px solid #ccc; */
+    @apply bg-primary/40 dark:bg-primary/50 rounded-[25px] px-[1px];
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    @apply cursor-grabbing;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/100;
+  }
+}
+
 @layer base {
   * {
     @apply antialiased;
