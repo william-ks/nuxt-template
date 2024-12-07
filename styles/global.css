@@ -5,6 +5,7 @@
     outline: 0;
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
+    transition: background .15s, color .03s;
 }
 
 html,

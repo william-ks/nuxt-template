@@ -1,8 +1,8 @@
 <template>
-  <div @click="toggle" class="toggleBox dark:bg-gray-950 bg-gray-100">
+  <div @click="toggle" class="toggleBox dark:bg-gray-900 bg-gray-100">
     <div class="iconBg" :class="{ darkActive: darkActive }">
-      <Icon v-show="!visibleMoon" class="icon" name="material-symbols:sunny" />
-      <Icon v-show="visibleMoon" class="moon" name="ic:round-nights-stay" />
+      <Icon v-show="!visibleMoon" class="icon" name="line-md:sunny-filled-loop" />
+      <Icon v-show="visibleMoon" class="moon" name="line-md:moon-rising-filled-alt-loop" />
     </div>
   </div>
 </template>
