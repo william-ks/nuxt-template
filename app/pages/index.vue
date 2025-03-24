@@ -1,11 +1,17 @@
+<script setup>
+
+</script>
+
 <template>
   <div class="center">
-    <UButton>Click me!</UButton>
-
-    <input type="text" class="input" placeholder="Type something" />
+    <UCard>
+      <h4>Content</h4>
+      <UiToggleTheme />
+      <UiTogglePallet />
+    </UCard>
   </div>
 </template>
 
-<style>
+<style scoped>
 
 </style>

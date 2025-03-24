@@ -2,9 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  ssr: false,
+
   modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/image'],
 
-  css: ['~/styles/main.css'],
+  css: ['~/styles/main.css', '~/styles/default.css'],
 
   future: {
     compatibilityVersion: 4
