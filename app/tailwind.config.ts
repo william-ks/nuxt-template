@@ -1,0 +1,67 @@
+// tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+export default {
+  content: [
+    "./components/**/*.{vue,js,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./composables/**/*.{js,ts}",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+  ],
+  blocklist: [
+    "bg-orange-500",
+    "bg-red-500",
+    "bg-amber-500",
+    "bg-yellow-500",
+    "bg-lime-500",
+    "bg-green-500",
+    "bg-emerald-500",
+    "bg-teal-500",
+    "bg-cyan-500",
+    "bg-sky-500",
+    "bg-blue-500",
+    "bg-indigo-500",
+    "bg-violet-500",
+    "bg-purple-500",
+    "bg-fuchsia-500",
+    "bg-pink-500",
+    "bg-rose-500",
+
+    "bg-slate-100",
+    "bg-slate-500",
+    "dark:bg-slate-800",
+    "dark:hover:bg-slate-800",
+    "border border-slate-100",
+    "border dark:border-slate-800",
+
+    "bg-gray-100",
+    "bg-gray-500",
+    "dark:bg-gray-800",
+    "dark:hover:bg-gray-800",
+    "border border-gray-100",
+    "border dark:border-gray-800",
+
+    "bg-zinc-100",
+    "bg-zinc-500",
+    "dark:bg-zinc-800",
+    "dark:hover:bg-zinc-800",
+    "border border-zinc-100",
+    "border dark:border-zinc-800",
+
+    "bg-neutral-100",
+    "bg-neutral-500",
+    "dark:bg-neutral-800",
+    "hover:dark:bg-neutral-800",
+    "border border-neutral-100",
+    "border dark:border-neutral-800",
+
+    "bg-stone-100",
+    "bg-stone-500",
+    "dark:bg-stone-800",
+    "dark:hover:bg-stone-800",
+    "border border-stone-100",
+    "border dark:border-stone-800",
+  ],
+} satisfies Config;
