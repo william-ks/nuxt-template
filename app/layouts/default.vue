@@ -1,8 +1,8 @@
 <template>
-  <UContainer>
+  <div>
     <slot />
     <Stars />
-  </UContainer>
+  </div>
 </template>
 
 <style></style>

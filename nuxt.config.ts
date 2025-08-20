@@ -3,9 +3,16 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL,
+    },
+  },
+
   ssr: false,
 
   app: {
+    baseURL: "/",
     pageTransition: { name: "page", mode: "out-in" },
   },
 
@@ -15,7 +22,7 @@ export default defineNuxtConfig({
 
   ui: {
     theme: {
-      colors: ["primary", "neutral", "red", "blue", "gray", "zinc"],
+      colors: ["primary", "secondary", "warning", "error", "success", "info"],
     },
   },
 
@@ -25,7 +32,7 @@ export default defineNuxtConfig({
     "@compodium/nuxt",
     "@vueuse/nuxt",
     "@pinia/nuxt",
-    "@formkit/auto-animate/nuxt"
+    "@formkit/auto-animate/nuxt",
   ],
   css: ["~/styles/main.css"],
 });

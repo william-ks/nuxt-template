@@ -2,9 +2,9 @@
   <UPopover v-model:open="open">
     <UButton
       color="primary"
-      variant="soft"
       class="cursor-pointer"
       icon="heroicons:swatch-20-solid"
+      size="lg"
     />
 
     <template #content>

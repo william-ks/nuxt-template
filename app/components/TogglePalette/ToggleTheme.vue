@@ -1,20 +1,20 @@
 <template>
-   <div class="">
-      <h3 class="text-sm font-medium mb-2">Theme</h3>
-      <UButtonGroup size="sm" orientation="horizontal" class="w-full">
-        <UButton
-          v-for="theme in themes"
-          :key="theme.value"
-          :variant="colorMode.preference === theme.value ? 'solid' : 'ghost'"
-          :color="colorMode.preference === theme.value ? 'primary' : 'neutral'"
-          @click="setTheme(theme.value)"
-          class="flex-1 justify-center"
-        >
-          <UIcon :name="theme.icon" class="size-4 mr-1" />
-          {{ theme.label }}
-        </UButton>
-      </UButtonGroup>
-    </div>
+  <div class="">
+    <h3 class="text-sm font-medium mb-2">Theme</h3>
+    <UButtonGroup size="sm" orientation="horizontal" class="w-full">
+      <UButton
+        v-for="theme in themes"
+        :key="theme.value"
+        :variant="colorMode.preference === theme.value ? 'solid' : 'ghost'"
+        :color="colorMode.preference === theme.value ? 'primary' : 'neutral'"
+        @click="setTheme(theme.value)"
+        class="flex-1 justify-center"
+      >
+        <UIcon :name="theme.icon" class="size-4 mr-1" />
+        {{ theme.label }}
+      </UButton>
+    </UButtonGroup>
+  </div>
 </template>
 
 <script setup>
@@ -30,9 +30,11 @@ const themes = [
 
 const setTheme = (theme) => {
   colorMode.preference = theme;
-  localStorage.setItem("nuxt-ui-black-as-primary", true);
+  localStorage.setItem("nuxt-color-mode", theme);
 
-  if (black.value === true) {
+  const black = localStorage.getItem("nuxt-ui-black-as-primary") === "true";
+
+  if (black === true) {
     if (theme === "dark") {
       appConfig.ui.colors.primary = "white";
     } else if (theme === "light") {

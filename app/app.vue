@@ -26,11 +26,20 @@ onMounted(() => {
   const matcher = window.matchMedia("(prefers-color-scheme: dark)");
   systemTheme.value = matcher.matches ? "dark" : "light";
 
-  colorMode.preference = localStorage.getItem("nuxt-ui-color-mode") || systemTheme.value;
+  colorMode.preference =
+    localStorage.getItem("nuxt-ui-color-mode") || systemTheme.value;
 
-  const primaryStorate = localStorage.getItem("nuxt-ui-primary");
-  if (!primaryStorate) {
+  const primaryStorage = localStorage.getItem("nuxt-ui-primary");
+  if (!primaryStorage) {
     localStorage.setItem("nuxt-ui-primary", appConfig.ui.colors.primary);
+
+    if (primaryStorage === "black" || primaryStorage === "white") {
+      localStorage.setItem("nuxt-ui-black-as-primary", "true");
+    } else {
+      localStorage.setItem("nuxt-ui-black-as-primary", "false");
+    }
+  } else {
+    localStorage.setItem("nuxt-ui-black-as-primary", "false");
   }
 
   const neutralStorage = localStorage.getItem("nuxt-ui-neutral");
