@@ -1,16 +1,11 @@
 <template>
   <div>
-    <div class="flex justify-between items-start mb-4">
-      <TogglePalette />
-      <p>Olá {{ userName }}</p>
+    <div class="flex justify-center items-center">
+      <UiThemePicker />
     </div>
-    <UButton>Teste</UButton>
   </div>
 </template>
 
-<script setup>
-
-
-</script>
+<script setup></script>
 
 <style scoped></style>

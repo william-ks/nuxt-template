@@ -1,5 +1,6 @@
 <template>
   <UApp :toaster="{ position: 'top-right', duration: 3000 }">
+    <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
     <NuxtLayout>
       <NuxtPage
         :transition="{
@@ -12,45 +13,41 @@
 </template>
 
 <script lang="ts" setup>
+import colors from "tailwindcss/colors";
+
+const appConfig = useAppConfig();
+const colorMode = useColorMode();
+
+const color = computed(() =>
+  colorMode.value === "dark"
+    ? (colors as any)[appConfig.ui.colors.neutral][900]
+    : "white"
+);
+const radius = computed(
+  () => `:root { --ui-radius: ${appConfig.theme.radius}rem; }`
+);
+const blackAsPrimary = computed(() =>
+  appConfig.theme.blackAsPrimary
+    ? `:root { --ui-primary: black; } .dark { --ui-primary: white; }`
+    : ":root {}"
+);
+
 useHead({
   htmlAttrs: {
     lang: "pt-BR",
   },
-});
-
-const appConfig = useAppConfig();
-const colorMode = useColorMode();
-const systemTheme = ref("light");
-
-onMounted(() => {
-  const matcher = window.matchMedia("(prefers-color-scheme: dark)");
-  systemTheme.value = matcher.matches ? "dark" : "light";
-
-  colorMode.preference =
-    localStorage.getItem("nuxt-ui-color-mode") || systemTheme.value;
-
-  const primaryStorage = localStorage.getItem("nuxt-ui-primary");
-  if (!primaryStorage) {
-    localStorage.setItem("nuxt-ui-primary", appConfig.ui.colors.primary);
-
-    if (primaryStorage === "black" || primaryStorage === "white") {
-      localStorage.setItem("nuxt-ui-black-as-primary", "true");
-    } else {
-      localStorage.setItem("nuxt-ui-black-as-primary", "false");
-    }
-  } else {
-    localStorage.setItem("nuxt-ui-black-as-primary", "false");
-  }
-
-  const neutralStorage = localStorage.getItem("nuxt-ui-neutral");
-  if (!neutralStorage) {
-    localStorage.setItem("nuxt-ui-neutral", appConfig.ui.colors.neutral);
-  }
-
-  const radiusStorage = localStorage.getItem("nuxt-ui-radius");
-  if (!radiusStorage) {
-    localStorage.setItem("nuxt-ui-radius", String(appConfig.ui.theme.radius));
-  }
+  meta: [
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { key: "theme-color", name: "theme-color", content: color },
+  ],
+  style: [
+    { innerHTML: radius, id: "nuxt-ui-radius", tagPriority: -2 },
+    {
+      innerHTML: blackAsPrimary,
+      id: "nuxt-ui-black-as-primary",
+      tagPriority: -2,
+    },
+  ],
 });
 </script>
 
@@ -64,4 +61,6 @@ onMounted(() => {
   opacity: 0;
   filter: blur(1rem);
 }
+
+/* Safelist (do not remove): [&>div]:*:my-0 [&>div]:*:w-full h-64 !px-0 !py-0 !pt-0 !pb-0 !p-0 !justify-start !justify-end !min-h-96 h-136 max-h-[341px] */
 </style>

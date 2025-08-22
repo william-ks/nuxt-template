@@ -1,7 +1,8 @@
 <template>
   <div>
     <slot />
-    <Stars />
+    <LazyUiStarsBg />
+    <LazyUiSkyBg />
   </div>
 </template>
 

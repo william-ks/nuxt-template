@@ -1,11 +1,12 @@
 export default defineAppConfig({
+  theme: {
+    radius: 0.25,
+    blackAsPrimary: false,
+  },
   ui: {
     colors: {
       primary: "teal",
       neutral: "neutral",
-    },
-    theme: {
-      radius: 0.25, // Default radius in rem
     },
     button: {
       slots: {
