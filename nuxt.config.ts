@@ -22,7 +22,32 @@ export default defineNuxtConfig({
 
   ui: {
     theme: {
-      colors: ["primary", "secondary", "warning", "error", "success", "info"],
+      colors: [
+        "primary",
+        "secondary",
+        "warning",
+        "error",
+        "success",
+        "info",
+        "amber",
+        "blue",
+        "cyan",
+        "emerald",
+        "fuchsia",
+        "green",
+        "indigo",
+        "lime",
+        "orange",
+        "pink",
+        "purple",
+        "red",
+        "rose",
+        "sky",
+        "slate",
+        "teal",
+        "violet",
+        "yellow",
+      ],
     },
   },
 
