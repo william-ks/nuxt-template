@@ -55,8 +55,8 @@ const radius = computed({
 
 const modes = [
   { label: "light", icon: "line-md:sunny-filled" },
-  { label: "system", icon: "line-md:moon-filled" },
-  { label: "dark", icon: "i-heroicons-computer-desktop" },
+  { label: "system", icon: "i-heroicons-computer-desktop" },
+  { label: "dark", icon: "line-md:moon-filled" },
 ];
 
 const mode = computed({
